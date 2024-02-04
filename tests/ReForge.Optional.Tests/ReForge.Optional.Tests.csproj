@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\ReForged.Optional\ReForged.Optional.csproj" />
+      <ProjectReference Include="..\..\src\ReForge.Optional\ReForge.Optional.csproj" />
     </ItemGroup>
 
 </Project>

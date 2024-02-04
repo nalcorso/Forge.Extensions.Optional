@@ -1,4 +1,4 @@
-﻿namespace ReForged;
+﻿namespace ReForge;
 
 /// <summary>
 /// Represents an optional value of a given type. An instance of this class either contains a value of type T or an exception.
