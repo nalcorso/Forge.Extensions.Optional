@@ -22,4 +22,8 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\ReForged.Optional\ReForged.Optional.csproj" />
+    </ItemGroup>
+
 </Project>
