@@ -27,7 +27,7 @@ public class OptionalTests
         var optional = Optional<int>.OfException(expectedException);
 
         // Assert
-        Exception? actualException = Assert.Throws<Exception>(() => optional.OrElseThrow());
+        var actualException = Assert.Throws<Exception>(() => optional.OrElseThrow());
         Assert.Equal(expectedException.Message, actualException?.Message);
     }
 
@@ -81,7 +81,7 @@ public class OptionalTests
         var optional = Optional<int>.OfException(expectedException);
 
         // Act & Assert
-        Exception? actualException = Assert.Throws<Exception>(() => optional.OrElseThrow());
+        var actualException = Assert.Throws<Exception>(() => optional.OrElseThrow());
         Assert.Equal(expectedException.Message, actualException?.Message);
     }
     
@@ -96,7 +96,7 @@ public class OptionalTests
         var result = Optional<int>.TryCreate(func);
 
         // Assert
-        Exception? actualException = Assert.Throws<Exception>(() => result.OrElseThrow());
+        var actualException = Assert.Throws<Exception>(() => result.OrElseThrow());
         Assert.Equal(expectedException.Message, actualException?.Message);
     }
 }
