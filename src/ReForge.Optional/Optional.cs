@@ -8,7 +8,7 @@ public class Optional<T>
 {
     private readonly T? _value;
     private readonly Exception? _exception;
-
+    
     /// <summary>
     /// Initializes a new instance of the <see cref="Optional{T}"/> class.
     /// </summary>
@@ -33,6 +33,49 @@ public class Optional<T>
     /// <param name="exception">The exception to be contained.</param>
     /// <returns>An instance of <see cref="Optional{T}"/> containing the provided exception.</returns>
     public static Optional<T> OfException(Exception exception) => new Optional<T>(default, exception);
+    
+    /// <summary>
+    /// Creates a new instance of the <see cref="Optional{T}"/> class with a value.
+    /// </summary>
+    /// <param name="value">The value to be contained.</param>
+    /// <returns>An instance of <see cref="Optional{T}"/> containing the provided value if not <c>null</c>; otherwise an empty instance.</returns>
+    /// <remarks>
+    /// This method is equivalent to calling <see cref="Of"/> with a default value if the provided value is <c>null</c>.
+    /// </remarks>
+    public static Optional<T> OfNullable(T? value) => value is null ? None : Of(value);
+    
+    /// <summary>
+    /// Represents an empty instance of the <see cref="Optional{T}"/> class.
+    /// </summary>
+    /// <returns>An empty instance of <see cref="Optional{T}"/>.</returns>
+    /// <remarks>
+    /// This property is equivalent to calling <see cref="Of"/> with a default value.
+    /// </remarks>
+    public static Optional<T> None => new Optional<T>(default, null);
+    
+    public TOut Match<TOut>(Func<T, TOut> valueHandler, Func<TOut> noneHandler, Func<Exception, TOut> exceptionHandler) =>
+        _value is not null 
+            ? valueHandler(_value) 
+            : _exception is not null 
+                ? exceptionHandler(_exception) 
+                : noneHandler();
+    
+    public void Match(Action<T> valueHandler, Action noneHandler, Action<Exception> exceptionHandler)
+    {
+        if (_value is not null)
+        {
+            valueHandler(_value);
+        }
+        else if (_exception is not null)
+        {
+            exceptionHandler(_exception);
+        }
+        else
+        {
+            noneHandler();
+        }
+    }
+    
 
     /// <summary>
     /// Transforms the value in the <see cref="Optional{T}"/> instance using the provided mapping function.
@@ -82,5 +125,14 @@ public class Optional<T>
         {
             return Optional<TOut>.OfException(ex);
         }
+    }
+
+    public override string ToString()
+    {
+        return Match(
+            value => $"Optional({value})",
+            () => "Optional.None",
+            exception => $"Optional.Exception({exception})"
+        );
     }
 }
