@@ -110,6 +110,24 @@ public class Optional<T>
     public T OrElseThrow() => _exception is not null ? throw _exception : _value!;
     
     /// <summary>
+    /// Returns a value indicating whether the <see cref="Optional{T}"/> instance contains a value.
+    /// </summary>
+    /// <returns><c>true</c> if the <see cref="Optional{T}"/> instance contains a value; otherwise <c>false</c>.</returns>
+    public bool IsValue => _value is not null;
+    
+    /// <summary>
+    /// Returns a value indicating whether the <see cref="Optional{T}"/> instance contains an exception.
+    /// </summary>
+    /// <returns><c>true</c> if the <see cref="Optional{T}"/> instance contains an exception; otherwise <c>false</c>.</returns>
+    public bool IsException => _exception is not null;
+    
+    /// <summary>
+    /// Returns a value indicating whether the <see cref="Optional{T}"/> instance is empty.
+    /// </summary>
+    /// <returns><c>true</c> if the <see cref="Optional{T}"/> instance is empty; otherwise <c>false</c>.</returns>
+    public bool IsNone => _value is null && _exception is null;
+    
+    /// <summary>
     /// Tries to create a new instance of the <see cref="Optional{TOut}"/> class using the provided function.
     /// </summary>
     /// <typeparam name="TOut">The type of the value to be optionally contained.</typeparam>
