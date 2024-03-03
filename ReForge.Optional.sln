@@ -14,6 +14,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{881EA1C7-0DD3-465B-8786-9E4C052D2DE8}"
+	ProjectSection(SolutionItems) = preProject
+		images\icon.png = images\icon.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +36,8 @@ Global
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{881EA1C7-0DD3-465B-8786-9E4C052D2DE8} = {74C1BF13-891E-4910-8FB5-7EC83BC36E40}
 	EndGlobalSection
 EndGlobal
