@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Optional", "src\ReForge.Optional\ReForge.Optional.csproj", "{A460ADB4-668F-466F-84FB-2A725453B64C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Optional.Tests", "tests\ReForge.Optional.Tests\ReForge.Optional.Tests.csproj", "{DB9AE2F7-B61F-4B44-849F-6C76F397F104}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74C1BF13-891E-4910-8FB5-7EC83BC36E40}"
@@ -19,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{881EA1
 		images\icon.png = images\icon.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReForge.Optional", "src\ReForge.Optional\ReForge.Optional.csproj", "{A36B1CD1-C0C2-419D-AE47-248A0ADC4D67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,14 +28,14 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A460ADB4-668F-466F-84FB-2A725453B64C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A460ADB4-668F-466F-84FB-2A725453B64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A460ADB4-668F-466F-84FB-2A725453B64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A460ADB4-668F-466F-84FB-2A725453B64C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB9AE2F7-B61F-4B44-849F-6C76F397F104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36B1CD1-C0C2-419D-AE47-248A0ADC4D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A36B1CD1-C0C2-419D-AE47-248A0ADC4D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A36B1CD1-C0C2-419D-AE47-248A0ADC4D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A36B1CD1-C0C2-419D-AE47-248A0ADC4D67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{881EA1C7-0DD3-465B-8786-9E4C052D2DE8} = {74C1BF13-891E-4910-8FB5-7EC83BC36E40}
