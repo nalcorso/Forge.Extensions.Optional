@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RootNamespace>Forge.Extensions</RootNamespace>
+        <Version>0.1.0-beta.2</Version>
+        <Authors>Nicholas Alcorso</Authors>
+        <Company>Nicholas Alcorso</Company>
+        <PackageId>Forge.Extensions.Optional</PackageId>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/nalcorso/Forge.Extensions.Optional</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageTags>Optional, C#, DiscriminatedUnion</PackageTags>
+        <PackageReleaseNotes>Initial beta release of Forge.Extensions.Optional.</PackageReleaseNotes>
+        <Description>Forge.Extensions.Optional is a simple implementation of the Optional type in C#.</Description>
+        <RepositoryUrl>https://github.com/nalcorso/Forge.Extensions.Optional.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\images\icon.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+</Project>

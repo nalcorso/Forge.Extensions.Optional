@@ -1,6 +1,4 @@
-namespace ReForge.Optional.Tests;
-
-using ReForge;
+namespace Forge.Extensions.Optional.Tests;
 
 public class OptionalTests
 {
